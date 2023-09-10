@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK5</title>
+</head>
+<body>
+    <script>
+//creating a class
+
+//a.create a constructor with parameters title,studio and rating
+
+        class movie{
+            constructor(title,studio,rating="PG"){//b. declaring a default rating "PG" if no ratings provided
+                this.title=title;
+                this.studio=studio;
+                this.rating=rating;
+            }
+        };
+
+        const movie1 = new movie("jailer","sathyam",5);
+        const movie2 = new movie("avengers","halan");
+        const movie3 = new movie("Casino Royale","Eon Productions","PG13");//d. creating a new movie details eith given values
+
+        console.log(movie1)
+        console.log(movie2)
+        console.log(movie3)   
+
+    </script>
+</body>
+</html>
