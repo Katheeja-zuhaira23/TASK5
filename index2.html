@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UML</title>
 </head>
+
 <body>
-    
+    <script>
+        class Circle {
+            constructor(radius, color) {
+                this.radius = radius;
+                this.color = color;
+            }
+            getRadius() {
+                return (`Radius = ${this.radius}`);
+            }
+        }
+
+
+        let circle1 = new Circle(1.2, "red");
+        //console.log(circle1)
+        console.log(circle1.getRadius());
+    </script>
 </body>
+
 </html>

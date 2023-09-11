@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UBER CALCULATION</title>
 </head>
 <body>
-    
+    <script>
+        class Uber{
+            constructor(kilometers,price,waitingMinutes){
+                this.kilometers = kilometers;
+                this.price = price;
+                this.waitingMinutes = waitingMinutes;
+            }
+            getDetails() {
+                return(`The distance of your travel is: ${this.kilometers}kms charging rs.${this.price*this.kilometers} as per km is rs.10 and extra waiting charge of rs.${this.waitingMinutes*2} as 2rs/min `);              
+            }
+            getTotal(){
+                let Total = (this.price)*(this.kilometers*5)+(this.waitingMinutes*2)
+                return Total
+            }
+            setKilometers(distance){
+                this.kilometers = distance;
+            }
+        }
+        const travel = new Uber(10,10,0); 
+        travel.setKilometers(20)  
+        console.log(travel.getDetails());
+        console.log(travel.getTotal());
+        const travel2 = new Uber(50,10,15); 
+        console.log(travel2.getDetails());
+        console.log(travel2.getTotal());
+       </script>
 </body>
 </html>

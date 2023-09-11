@@ -11,17 +11,23 @@
 
 //a.create a constructor with parameters title,studio and rating
 
-        class movie{
+        class Movie{
             constructor(title,studio,rating="PG"){//b. declaring a default rating "PG" if no ratings provided
                 this.title=title;
                 this.studio=studio;
                 this.rating=rating;
-            }
-        };
-
-        const movie1 = new movie("jailer","sathyam",5);
-        const movie2 = new movie("avengers","halan");
-        const movie3 = new movie("Casino Royale","Eon Productions","PG13");//d. creating a new movie details eith given values
+        }
+                getPG = function(){
+                    let result=[]
+                    if(this.rating==="PG")
+                    result.push(this.rating)
+                    return result
+                }
+            };
+        console.log(movie1.getPG())
+        const movie1 = new Movie("jailer","sathyam",5);
+        const movie2 = new Movie("avengers","halan");
+        const movie3 = new Movie("Casino Royale","Eon Productions","PG13");//d. creating a new movie instance with given values
 
         console.log(movie1)
         console.log(movie2)
