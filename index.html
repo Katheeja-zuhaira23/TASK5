@@ -16,22 +16,25 @@
                 this.title=title;
                 this.studio=studio;
                 this.rating=rating;
-        }
-                getPG(){//c.craeting getPG method
-                    let result=[]
-                    if(this.rating==="PG")
-                    result.push(this.rating)
-                    return result
+        } 
+        
+                    static getPG(moviesArray){
+                    for(let i=0;i<moviesArray.length;i++)//c.craeting getPG method
+                    if(moviesArray[i].rating==="PG")
+                    return moviesArray[i]
                 }
             };
-        console.log(movie1.getPG())
-        const movie1 = new Movie("jailer","sathyam",5);
-        const movie2 = new Movie("avengers","halan");
-        const movie3 = new Movie("Casino Royale","Eon Productions","PG13");//d. creating a new movie instance with given values
-
-        console.log(movie1)
-        console.log(movie2)
-        console.log(movie3)   
+        
+        const moviesArray=[
+        new Movie("jailer","sathyam",5),
+        new Movie("avengers","halan"),
+        new Movie("leo","AGS","PG")
+        ]
+        const newMovie = new Movie("Casino Royale","Eon Productions","PG13")//d. creating a new movie instance with given values
+        
+        console.log(newMovie)
+        console.log(Movie.getPG(moviesArray))
+  
 
     </script>
 </body>

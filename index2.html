@@ -14,15 +14,15 @@
                 this.radius = radius;
                 this.color = color;
             }
-            getRadius() {
-                return (`Radius = ${this.radius}`);
+            static getRadius(circle1) {
+                return (`Radius = ${circle1.radius}`);
             }
         }
 
 
         let circle1 = new Circle(1.2, "red");
-        //console.log(circle1)
-        console.log(circle1.getRadius());
+        console.log(circle1)
+        console.log(Circle.getRadius(circle1));
     </script>
 </body>
 
