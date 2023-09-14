@@ -8,17 +8,20 @@
 <body>
     <script>
         class Person{
-            constructor(name,age,address,education,mail_id){
-                this.name = name;
+            constructor(FirstName,LastName,age,address,education,mail_id,contactNumber){
+                this.FirstName = FirstName;
+                this.LastName = LastName;
                 this.age = age;
                 this.address = address;
                 this.education = education;
                 this.mail_id = mail_id;
+                this.contactNumber = contactNumber;
             }
         }
 
-        const person1 = new Person("katheeja",22,"12/A,north car street","B.sc","zuhai@gmail.com");
+        const person1 = new Person("Katheeja","Zuhaira",22,"12/A,north car street","B.sc","zuhai@gmail.com",9856673214);
         console.log(person1);
+
 
     </script>
 </body>
