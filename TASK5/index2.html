@@ -10,19 +10,42 @@
 <body>
     <script>
         class Circle {
-            constructor(radius, color) {
+            constructor(radius, color) {           //creating a class circle
                 this.radius = radius;
                 this.color = color;
             }
-            static getRadius(circle1) {
-                return (`Radius = ${circle1.radius}`);
+            getRadius(circle1) {                   //getting radius double
+                return (`Radius = ${this.radius}`);
             }
-        }
+            getColor(circle1) {                   // getting color as string
+                return (`Color = ${this.color}`);
+            }
+            getArea() {                          //getting area of circle
+                return Math.PI * Math.pow(this.radius, 2);
 
+            } getCircumference() {              //getting circumference of circle
+                return 2 * Math.PI * this.radius;
 
-        let circle1 = new Circle(1.2, "red");
+            }
+            setRadius(newRadius){              //setting new radius
+                this.radius = newRadius;
+            }
+            setColor(newColor){              //setting new color
+                this.color = newColor;
+            }
+        };
+          
+        let circle1 = new Circle(1.2, "red"); // creating instance circle1  
         console.log(circle1)
-        console.log(Circle.getRadius(circle1));
+        circle1.setRadius(4.2)
+        circle1.setColor("orange")
+        console.log(circle1.getRadius());
+        console.log(circle1.getColor());
+        console.log("AREA:",circle1.getArea());
+        console.log("CIRCUMFERENCE:",circle1.getCircumference());
+        
+
+
     </script>
 </body>
 

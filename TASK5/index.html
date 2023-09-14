@@ -19,16 +19,20 @@
         } 
         
                     static getPG(moviesArray){
+                    let res = []    
                     for(let i=0;i<moviesArray.length;i++)//c.craeting getPG method
                     if(moviesArray[i].rating==="PG")
-                    return moviesArray[i]
+                     res.push(moviesArray[i])
+                    return res;
                 }
             };
         
         const moviesArray=[
         new Movie("jailer","sathyam",5),
-        new Movie("avengers","halan"),
-        new Movie("leo","AGS","PG")
+        new Movie("avengers","halan","PG"),
+        new Movie("leo","AGS","PG"),
+        new Movie("beast","alber","PG"),
+
         ]
         const newMovie = new Movie("Casino Royale","Eon Productions","PG13")//d. creating a new movie instance with given values
         
